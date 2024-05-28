@@ -2,11 +2,9 @@ import requests
 import difflib
 import os
 
-# URL of the bot.py on GitHub
-github_url = "https://raw.githubusercontent.com/Dumbation42/SAM-v3.0-onwards/main/bot.py"
+github_url = "https://raw.githubusercontent.com/Dumbation42/SAM-Pro/main/SAM pro.py"
 
-# Path to the local version of bot.py (change this to your actual file path)
-local_file_path = "/home/aj/programs2/sam-discord-ai-bot/src/bot.py"
+local_file_path = "Local path to SAM pro.py"
 
 # Function to fetch bot.py from GitHub
 def fetch_github_version(url):
@@ -35,7 +33,7 @@ def compare_and_update(github_content, local_content, local_path):
     
     # Use difflib to compare the files
     if github_content == local_content:
-        print("The local version of bot.py is up-to-date.")
+        print("The local version of SAM pro.py is up-to-date.")
     else:
         print("Differences detected. Updating the local version of bot.py...")
         try:
