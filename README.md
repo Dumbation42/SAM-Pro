@@ -1,17 +1,112 @@
-# What is SAM Pro?
-SAM Pro is the next evolution of the Smart Automated Messenger, now leveraging the power of OpenAI's GPT-4o API for enhanced conversational capabilities. Building on the robust features of its predecessor, SAM Pro offers a more intelligent and responsive user experience for your Discord server.
-Key Features:
+SAM-Pro Discord Bot
 
-    Dynamic Presence Updates: SAM Pro updates its presence status regularly, indicating its current activity to users.
-    AI-Powered Image Generation: Generates images based on user prompts using advanced AI models while ensuring content safety through automated checks.
-    Contextual Conversations: Maintains a memory cache for each server to provide contextually relevant responses, enhancing interaction continuity.
-    Customizable Personality: Allows users to tailor the bot's conversation style to suit their preferences, making interactions more engaging and personalized.
+SAM-Pro is a Discord bot that leverages OpenAI's GPT models and Stability AI's Stable Diffusion XL to provide a conversational AI experience with image generation capabilities. Users can interact with the bot using slash commands or by mentioning it directly in messages.
+Features
 
-New with SAM Pro:
+    Conversational AI: Engage in conversations with the bot powered by OpenAI's GPT models.
+    Per-User Contexts: The bot maintains conversation context individually for each user.
+    Custom Personalities: Users can set custom response styles or let the bot generate one randomly.
+    Image Generation: Generate images based on prompts using Stable Diffusion Ultra.
+    Slash Commands: Easy-to-use slash commands for all functionalities.
+    Persistence: User contexts and personalities are saved between sessions.
 
-    Powered by GPT-4o: Transitioning from the freeGPT's GPT-3 model to OpenAI's GPT-4o, SAM Pro offers more sophisticated and accurate responses, ensuring a superior conversational experience.
-    Enhanced Performance and Accuracy: Enjoy faster, more reliable responses with improved understanding and context handling.
+Table of Contents
 
-Requirements:
+    Installation
+        Prerequisites
+        Clone the Repository
+        Install Dependencies
+        Configuration
+    Usage
+        Running the Bot
+        Available Commands
+    Development
+    License
+    Contributing
 
-    Access to OpenAI’s Paid API: SAM Pro requires a subscription to OpenAI's GPT-4o API to function. Ensure you have an active API key from OpenAI to deploy and utilize SAM Pro fully.
+Installation
+Prerequisites
+
+    Python 3.6 or higher: Ensure you have Python installed. You can download it from the official website.
+    Discord Bot Token: Create a bot on the Discord Developer Portal and get the bot token.
+    OpenAI API Key: Sign up for an account at OpenAI and obtain an API key.
+    Stability AI API Key: Sign up at Stability AI to get an API key for image generation.
+
+Clone the Repository
+
+git clone https://github.com/Dumbation42/SAM-Pro.git
+cd SAM-Pro
+
+Install Dependencies
+Option 1: Using the Install Script
+
+Run the provided Python script to install all dependencies automatically.
+
+python install_dependencies.py
+
+Option 2: Using requirements.txt
+
+Alternatively, install dependencies using pip and the provided requirements.txt file.
+
+pip install -r requirements.txt
+
+Configuration
+
+Create a config.json file in the root directory of the project with the following structure:
+
+{
+  "OPENAI_API_KEY": "your_openai_api_key",
+  "STABLE_API": "your_stability_ai_api_key",
+  "BOT_TOKEN": "your_discord_bot_token"
+}
+
+    Replace "your_openai_api_key" with your OpenAI API key.
+    Replace "your_stability_ai_api_key" with your Stability AI API key.
+    Replace "your_discord_bot_token" with your Discord bot token.
+
+Usage
+Running the Bot
+
+To start the bot, run the main script:
+
+python bot.py
+
+Available Commands
+Slash Commands
+
+    /help: Displays a help message with all available commands.
+    /refresh: Clears your conversation context with the bot.
+    /style [style]: Sets a custom response style (personality) for the bot.
+    /freewill: Lets the bot randomly decide a personality for you.
+    /ask [question]: Ask the bot a question.
+    /image [prompt]: Generates an image based on the provided prompt.
+
+Direct Interaction
+
+    Mentioning the Bot: You can mention the bot in any channel it's in to start a conversation.
+
+Examples
+
+    Set Personality
+
+/style Wise Mentor
+
+Bot responds:
+
+Your personality has been set to: Wise Mentor
+
+Generate Image
+
+/image A futuristic city skyline at sunset
+
+Bot responds with the generated image or "Generation Refused" if the request is denied.
+
+Ask a Question
+
+/ask What is the capital of France?
+
+Bot responds:
+
+The capital of France is Paris.
+
+Note: This bot uses paid APIs. Monitor your usage on OpenAI and Stability AI platforms to avoid unexpected charges.
