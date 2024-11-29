@@ -20,9 +20,6 @@ Table of Contents
     Usage
         Running the Bot
         Available Commands
-    Development
-    License
-    Contributing
 
 Installation
 Prerequisites
