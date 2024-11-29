@@ -1,5 +1,5 @@
 {
-    "OPENAI_API_KEY": "Your OpenAI API Key",
-    "BOT_TOKEN": "Your Discord Bot Token"
-  }
-  
+  "OPENAI_API_KEY": "OpenAI key",
+  "BOT_TOKEN": "Discord token",
+  "STABLE_API": "Stability.ai key"
+}
